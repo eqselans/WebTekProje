@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: 'TRT';
+  transition: all .6s;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+.navbar{
+  background-color: #0f263e;
+  height: 100px;
+}
+.card{
+  background-color: #0f263e;
+}
+.collapse{
+  background-color: #0f263e;
+  text-align: center;
+  border-radius: 15px;
+}
+.navbar-brand:hover{
+  filter: drop-shadow(0 0 1.1rem rgb(20, 143, 220));
+}
+
+/* #backtotop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+#backtotop i {
+  
+  font-size: 45px;
+  transition: all 0.9s;
+  z-index: 6;
+  padding: 10px;
+  border-radius: 49px;
+}
+#backtotop i:hover{
+  opacity: 0.8!important;
+} */
+.github a{
+  text-decoration: none!important;
+  color: aliceblue!important;
+  font-size: 32px;
+}
+
+footer{
+  background-color: #0f263e;
+}
