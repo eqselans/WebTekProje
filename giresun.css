@@ -28,16 +28,19 @@ header h1{
     border-radius: 15px;
 }
 .konu1{
-    background-color: #98D8AA;
+    background-color: #fffdf2;
 }
 .konu2{
     background-color: #98D8AA;
 }
 .konu3{
-    background-color: #98D8AA;
+    background-color: #fffdf2;
 }
 .konu4{
     background-color: #98D8AA;
+}
+.konu5{
+    background-color: #fffdf2;
 }
 .github a{
     text-decoration: none;
