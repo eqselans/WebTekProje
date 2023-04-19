@@ -14,10 +14,30 @@ html {
 .navbar-brand:hover{
     filter: drop-shadow(0 0 1.1rem rgb(20, 143, 220));
 }
+
+.carousel-item {
+	height: 120vh;
+	min-height: 500px;
+}
+header h1{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
 .collapse{
     background-color: #0f263e;
     text-align: center;
     border-radius: 15px;
+}
+.konu1{
+    background-color: #98D8AA;
+}
+.konu2{
+    background-color: #98D8AA;
+}
+.konu3{
+    background-color: #98D8AA;
+}
+.konu4{
+    background-color: #98D8AA;
 }
 .github a{
     text-decoration: none;
