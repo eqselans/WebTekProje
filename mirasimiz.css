@@ -14,6 +14,12 @@ html {
 .navbar-brand:hover{
     filter: drop-shadow(0 0 1.1rem rgb(20, 143, 220));
 }
+h1:hover{
+    scale: 1.30;
+}
+img:hover{
+    scale: 0.85;
+}
 .collapse{
     background-color: #0f263e;
     text-align: center;
