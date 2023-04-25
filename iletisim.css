@@ -48,3 +48,21 @@ html {
 footer{
   background-color: #0f263e;
 }
+
+@media screen and (max-width: 768px) { /* Tablet */
+  .navbar{
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 576px) { /* Mobil */
+  .navbar{
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 992px) { /* Masaüstü */
+  .navbar{
+    height: 120px;
+    font-size: 15px!important;
+  }}
