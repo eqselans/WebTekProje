@@ -87,14 +87,14 @@
     </nav>
 
     <main class="container text-center pt-5">
-      <button id="getArticleButton">Rastgele Haber Getirmek İçin Tıklayınız</button>
-      <h2 id="articleTitle" class="pt-5"></h2>
-      <p id="articleAbstract" class="pt-3"></p>
+      <button id="makaleGetir">Rastgele Haber Getirmek İçin Tıklayınız</button>
+      <h2 id="makaleBaslik" class="pt-5"></h2>
+      <p id="makaleOzet" class="pt-3"></p>
 
       <h6 class="text-dark-emphasis pt-2">Veriler New York Times üzerinden alınmıştır.</h6>
     </main>
 
-    <footer class="py-4 text-center text-light fixed-bottom">
+    <footer class="py-3 text-center text-light fixed-bottom">
       <span class="container text-center lead">
         Tüm hakları saklıdır. @2023
       </span>
@@ -130,15 +130,15 @@
               const articleAbstract =
                 data.results[Math.floor(Math.random() * data.results.length)]
                   .abstract;
-              document.getElementById("articleTitle").textContent =
+              document.getElementById("makaleBaslik").textContent =
                 articleTitle;
-              document.getElementById("articleAbstract").textContent =
+              document.getElementById("makaleOzet").textContent =
                 articleAbstract;
             })
             .catch((error) => console.log(error));
         }
         document
-          .getElementById("getArticleButton")
+          .getElementById("makaleGetir")
           .addEventListener("click", getRandomArticle);
       });
     </script>
