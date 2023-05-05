@@ -77,18 +77,8 @@ html{
     box-shadow: 5px 5px 15px rgb(0 0 0);
     transition: all 0.6s;
 }
-.github a{
-    text-decoration: none!important;
-    color: aliceblue!important;
-    font-size: 32px;
-  }
-  
-  footer{
-    background-color: #0f263e;
-  }
 @media only screen and (min-width:768px) and (max-width:1023px){
     .navbar{
         font-size: 12px!important;
     }
 }
-

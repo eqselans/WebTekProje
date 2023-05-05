@@ -33,3 +33,8 @@ img:hover{
 footer{
     background-color: #0f263e;
 }
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .navbar{
+        font-size: 12px!important;
+    }
+}

@@ -26,6 +26,7 @@ header h1{
     background-color: #0f263e;
     text-align: center;
     border-radius: 15px;
+    z-index: 5;
 }
 .konu1{
     background-color: #fffdf2;
@@ -49,4 +50,9 @@ header h1{
 }
 footer{
     background-color: #0f263e;
+}
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .navbar{
+        font-size: 12px!important;
+    }
 }
