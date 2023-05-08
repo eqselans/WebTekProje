@@ -35,6 +35,10 @@
       crossorigin="anonymous"
     />
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="login.css" />
   </head>
   <body id="body">
@@ -60,47 +64,24 @@
       </div>
   </nav>
 
+  <main class="text-center fs-1 fw-bold shadow mt-5 animate__pulse">
 
-    <form class="signup-page container mb-5" action="login.php" method="POST">
-      <h1 class="signup-title pt-5 fw-bolder">Giriş Yap</h1>
-      <div class="signup-form pt-3">
+    <?php
+        if($_POST["Mail"] == "admin101@gmail.com" && $_POST["password"] == "123"){
+            echo "Admin giriş yaptı!";
+        }
+        else{
+            echo "Lütfen geçerli bir e-posta adresi giriniz.";
+        }
+    ?>
 
-        
-        <label class="text-dark fw-bold" for="email">Mail: || admin101@gmail.com</label>
-        <input
-        name="Mail"
-          type="text"
-          id="email"
-          class="rounded-3"
-          placeholder="adsoyad@gmail.com"
-        />
 
-        <label class="text-dark fw-bolder" for="password">Şifreniz: || 123</label>
-        <input
-        name="password"
-          type="password"
-          id="password"
-          class="rounded-3"
-          placeholder="********"
-        />
+</main>
 
-        <div class="row-cols-6 buttons">
-          <button class="btn btn-light text-primary" id="login" type="submit">Giriş Yap</button>
-          <button class="btn btn-light text-primary sifre">Şifremi Unuttum</button>
-        </div>
-        
-        
-      </div>
-    </form>
-    <form class="container w-50" action="/register.html">
-      <div class="row-cols-6 kayit">
-        <a href="/register.html" target="_blank">
-          <button class="btn btn-light w-100 text-primary">Kayıt Ol</button>
-        </a>
-      </div>
-    </form>
-    
-    <footer class="py-4 text-center text-light mt-auto fixed-bottom">
+
+
+
+  <footer class="py-4 text-center text-light mt-auto fixed-bottom">
       <span class="container text-center lead">
         Tüm hakları saklıdır. @2023
       </span>
@@ -120,5 +101,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
   </body>
 </html>
+    
