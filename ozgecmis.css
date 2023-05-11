@@ -18,10 +18,10 @@ html {
     translate: 0px -9px;
 }
 .my-text p:hover{
-    translate: 50px 0px
+    translate: 50px 0px;
 }
 .container h1:hover{
-    translate: 25px -10px;
+    transform: scale(1.35) ;
 }
 .collapse{
     background-color: #0f263e;
