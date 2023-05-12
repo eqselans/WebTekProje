@@ -1,144 +1,3 @@
-// let  oru = {
-//     soruMetni : "Hangisi seçimde aday değildir?",
-//     cevapSecenekleri : {
-//         a: "RTE",
-//         b: "KK",
-//         c: "Ogan",
-//         d: "İnce"
-//     },
-
-//     dogruCevap : "d",
-
-
-//     cevapKontrol : function (cevap) {
-//         return cevap === this.dogruCevap
-//     }
-// }
-// let soru2 = {
-//     soruMetni : "Seçim ne zaman?",
-//     cevapSecenekleri : {
-//         a: "14",
-//         b: "15",
-//         c: "13",
-//         d: "12"
-//     },
-
-//     dogruCevap : "a",
-
-
-//     cevapKontrol : function (cevap) {
-//         return cevap === this.dogruCevap
-//     }
-// }
-// let soru3 = {
-//     soruMetni : "Hangi gün?",
-//     cevapSecenekleri : {
-//         a: "pzr",
-//         b: "cuma",
-//         c: "cmt",
-//         d: "pzt"
-//     },
-
-//     dogruCevap : "a",
-
-
-//     cevapKontrol : function (cevap) {
-//         return cevap === this.dogruCevap
-//     }
-// }
-// let soru4 = {
-//     soruMetni : "saat?",
-//     cevapSecenekleri : {
-//         a: "17",
-//         b: "8",
-//         c: "21",
-//         d: "24"
-//     },
-
-//     dogruCevap : "b",
-
-
-//     cevapKontrol : function (cevap) {
-//         return cevap === this.dogruCevap
-//     }
-// }
-
-// //#region Soru1
-
-// document.getElementById("soru").innerHTML = soru.soruMetni;
-
-// document.getElementsByTagName("input").innerHTML = soru.cevapSecenekleri;
-// console.log(soru.soruMetni);
-// console.log(soru.cevapSecenekleri);
-// var cevap1 = prompt("Cevap giriniz:")
-// console.log("Cevabınız: "+cevap1);
-// cevap1 = soru.cevapKontrol(cevap1)
-// if (cevap1) {
-//     cevap1 = "Doğru";
-// }
-// else{
-//     cevap1 = "Yanlış"
-// }
-// console.log(cevap1);
-// //#endregion
-// //#region Soru2
-// console.log(soru2.soruMetni);
-// console.log(soru2.cevapSecenekleri);
-// var cevap2 = prompt("Cevap giriniz:")
-// console.log("Cevabınız: "+cevap2);
-// cevap2 = soru2.cevapKontrol(cevap2)
-// if (cevap2) {
-//     cevap2 = "Doğru";
-// }
-// else{
-//     cevap2 = "Yanlış"
-// }
-// console.log(cevap2);
-// //#endregion
-// //#region Soru3
-// console.log(soru3.soruMetni);
-// console.log(soru3.cevapSecenekleri);
-// var cevap3 = prompt("Cevap giriniz:")
-
-
-// console.log("Cevabınız: "+cevap3);
-// cevap3 = soru3.cevapKontrol(cevap3)
-// if (cevap3) {
-//     cevap3 = "Doğru";
-// }
-// else{
-//     cevap3 = "Yanlış"
-// }
-// console.log(cevap3);
-
-// //#endregion
-// //#region Soru 4
-// console.log(soru4.soruMetni);
-// console.log(soru4.cevapSecenekleri);
-// var cevap4 = prompt("Cevap giriniz: ");
-// // cevap4 = String(cevap4);
-
-// console.log("Cevabınız: "+cevap4);
-
-// cevap4 = soru4.cevapKontrol(cevap4)
-// if (cevap4) {
-//     cevap4 = "Doğru";
-// }
-// else{
-//     cevap4 = "Yanlış"
-// }
-// console.log(cevap4);
-
-
-// if (cevap1 == "Doğru" && cevap2 == "Doğru" && cevap3 == "Doğru" && cevap4 == "Doğru") {
-//     console.log("Tebrikler testi doğru cevaplarla tamamladınız!");
-//     let value = "Tebrikler"
-//     document.getElementById("soru").innerHTML = value;
-// }
-// else{
-//     console.log("Maalesef yanlış cevabınız var");
-// }
-// //#endregion
 
 function Soru(soruMetni,cevapSecenekleri,dogruCevap) {
     this.soruMetni = soruMetni;
@@ -149,11 +8,6 @@ function Soru(soruMetni,cevapSecenekleri,dogruCevap) {
 Soru.prototype.cevapKontrol = function (cevap) {
     return cevap === this.dogruCevap;
 }
-
-let soru1 = new Soru("Hangisi bir web tarayıcısının temel bileşenlerinden biridir?",{A: "HTML",b: "CSS",c: "JavaScript", d: "Browser Engine"},"d");
-let soru2 = new Soru("Seçim ne zaman?",{a:"14",b:"15",c:"13",d:"16"},"a");
-let soru3 = new Soru("Hangi gün?",{a:"pzr",b:"cmt",c:"cuma",d:"salı"},"a");
-let soru4 = new Soru("Saat?",{a:"17",b:"8",c:"16",d:"21"},"b");
 
 
 let sorular = [
@@ -170,34 +24,40 @@ let sorular = [
 ]
 
 
-
-// for(let s of sorular){
-//     console.log(s.soruMetni);
-//     console.log(s.cevapSecenekleri);
-// }
-
 function Quiz(sorular) {
     this.sorular = sorular;
     this.soruIndex =0;
     this.dogruCevapSayisi =0;
     this.score_box = document.querySelector(".score_box");
     this.quiz_box = document.querySelector(".quiz_box");
+    this.btn_replay = document.querySelector(".btn_replay");
+    this.btn_quit = document.querySelector(".btn_quit");
+    this.btn_start = document.querySelector(".btn_start");
+    this.time_second = document.querySelector(".time_second");
+    this.timer_text = document.querySelector(".timer_text");
+    this.option_list = document.querySelector(".option_list");
+    this.correctIcon = '<div class="icon"><i class="fas fa-check"></i></div>';
+    this.incorrectIcon = '<div class="icon"><i class="fas fa-times"></i></div>';
+    this.btn_next = document.querySelector(".next_btn");
+    this.time_line = document.querySelector(".time_line");
 }
 
 Quiz.prototype.soruGetir = function () {
     return this.sorular[this.soruIndex];
 }
 
+Quiz.prototype.skoruGoster = function (toplamSoru,dogruCevap) {
+    let tag = `Toplam ${toplamSoru} sorudan ${dogruCevap} doğru cevap verdiniz.`;
+    document.querySelector(".score_box .score_text").innerHTML = tag;
+}
+
 const quiz = new Quiz(sorular);
 
-// for (let i = 0; i < sorular.length; i++) {
-//     console.log(quiz.soruGetir());
-//     quiz.soruIndex++;
-    
-// }
 
-document.querySelector(".btn_start").addEventListener("click",function () {
+quiz.btn_start.addEventListener("click",function () {
         document.querySelector(".quiz_box").classList.add("active");
+        startTimer(15);
+
         soruGoster(quiz.soruGetir());
         soruSayisiniGoster(quiz.soruIndex +1 ,quiz.sorular.length);
 })
@@ -207,17 +67,32 @@ document.querySelector(".next_btn").addEventListener("click",function () {
     if (quiz.sorular.length != quiz.soruIndex + 1) {
         quiz.soruIndex++;
         soruSayisiniGoster(quiz.soruIndex + 1 ,quiz.sorular.length);
+        clearInterval(counter);
+        startTimer(15);
+        quiz.timer_text.textContent = "Kalan Süre:"
         if (quiz.soruIndex == 9) {
             document.querySelector(".next_btn").disabled = true;
         }
         soruGoster(quiz.soruGetir())
     } else{
         console.log("Quiz bitti!");
-        quiz.quiz_box.classList.add("active");
+        quiz.quiz_box.classList.remove("active");
         quiz.score_box.classList.add("active");
+        quiz.skoruGoster(quiz.sorular.length,quiz.dogruCevapSayisi);
     }
 
 });
+
+quiz.btn_quit.addEventListener("click",function () {
+    window.location.reload();
+})
+
+quiz.btn_replay.addEventListener("click",function () {
+    quiz.soruIndex = 0;
+    quiz.dogruCevapSayisi = 0;
+    quiz.btn_start.click();
+    quiz.score_box.classList.remove("active");
+})
 
 const option_list = document.querySelector(".option_list");
 const correctIcon = '<div class="icon"><i class="fas fa-check"></i></div>'
@@ -248,6 +123,7 @@ function soruGoster(soru) {
     }
 }
 function optionSelected(option) {
+    clearInterval(counter)
     let cevap = option.querySelector("span b").textContent;
     let soru = quiz.soruGetir();
     
@@ -276,3 +152,30 @@ function soruSayisiniGoster(soruSirasi,toplamSoru) {
     document.querySelector(".quiz_box .question_index").innerHTML = tag
 }
 
+let counter ;
+function startTimer(time) {
+    counter = setInterval(timer,1000);
+
+    function timer() {
+        quiz.time_second.textContent = time;
+        time --;
+        if (time < 0) {
+            clearInterval(counter);
+
+            quiz.timer_text.textContent = "Süre Bitti!";
+            quiz.time_second.textContent = "";
+            let cevap = quiz.soruGetir().dogruCevap;
+
+            for(let option of quiz.option_list.children){
+                if (option.querySelector("span b").textContent == cevap) {
+                    option.classList.add("correct");
+                    option.insertAdjacentHTML("beforeend",quiz.correctIcon)
+                    quiz.btn_next.disabled = false;
+                }
+            option.classList.add("disabled");
+        }
+    }
+    
+}
+
+}

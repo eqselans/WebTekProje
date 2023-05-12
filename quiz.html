@@ -78,31 +78,18 @@
       <button class="btn">Quizi Başlat</button>
     </div>
 
-    <div class="card quiz_box" id="box">
+    <div class="card quiz_box w-auto h-auto" id="box">
       <header class="card-header">
         <div class="title"><i class="fas fa-code fa-spin"></i> Web Teknolojileri Quiz</div>
+        <div class="timer bg-danger text-white rounded-2 ">
+          <div class="timer_text p-1">Kalan Süre: </div>
+          <div class="time_second p-1 ms-2 me-2 text-center"></div>
+        </div>
       </header>
       <section class="card-body">
         <div class="soru_text"><div class="span">
-            <!-- <span>Hangisi aday değildir?</span> -->
         </div></div>
         <div class="option_list">
-          <!-- <div class="option">
-            <span>A: RTE</span>
-            <div class="icon"><i class="fas fa-times"></i></div>
-          </div>
-          <div class="option">
-            <span>B: KK</span>
-            <div class="icon"><i class="fas fa-times"></i></div>
-          </div>
-          <div class="option incorrect">
-            <span>C: OĞAN</span>
-            <div class="icon"><i class="fas fa-times"></i></div>
-          </div>
-          <div class="option correct">
-            <span>D: İNCE</span>
-            <div class="icon"><i class="fas fa-check"></i></div>
-          </div> -->
         </div>
       </section>
 
@@ -115,12 +102,12 @@
     </div>
 
 
-    <div class="card score_box text-center">
+    <div class="card score_box w-auto h-auto">
       <div class="icon"><i class="fas fa-crown"></i></div>
-      <div class="score_text">Toplam 10 sorudan 5 doğru cevap verdiniz.</div>
+      <div class="score_text fs-3 fw-bold"></div>
       <div class="buttons">
         <button class="btn btn-success btn_replay">Tekrar Başlat</button>
-        <button class="btn btn-warning btn_quiz">Testi Bitir</button>
+        <button class="btn btn-warning btn_quit">Testi Bitir</button>
       </div>
     </div>
 
