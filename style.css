@@ -1,0 +1,130 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    font-family: 'TRT';
+}  
+html {
+    scroll-behavior: smooth !important;
+    background-image: url(/images/pexels-markus-spiske-2004161.jpg);
+
+}
+.navbar{
+    background-color: #0f263e;
+    height: 100px;
+}
+
+.navbar-brand:hover{
+    filter: drop-shadow(0 0 1.1rem rgb(20, 143, 220));
+}
+
+.collapse{
+    background-color: #0f263e;
+    text-align: center;
+    border-radius: 15px;
+}
+.github a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 32px;
+}
+/* footer{
+    background-color: #0f263e;
+} */
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .navbar{
+        font-size: 12px!important;
+    }
+}
+
+
+.btn_start,
+.quiz_box,
+.score_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.btn_start button{
+    background-color: #0f263e;
+    color: aliceblue;
+}
+.btn_start button:hover{
+    color: #0f263e;
+    background-color: aliceblue;
+}
+
+.quiz_box.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all .6s;
+}
+
+.quiz_box{
+    width: 550px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz_box header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box .soru_text{
+    font-size: 25px;
+    font-weight: 600;
+}
+.quiz_box .option_list{
+    padding: 18px 0;
+}
+
+.quiz_box .option_list .option.disabled{
+    pointer-events: none;
+}
+
+.quiz_box .option_list .option{
+    border: 1px solid navy;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.quiz_box .option_list .option:hover{
+    color: aliceblue;
+    background-color: #0d6efd;
+    transition: .3s;
+}
+.quiz_box .option_list .option.correct{
+    color: #155724;
+    background-color: #d4edda;
+}
+.quiz_box .option_list .option.incorrect{
+    color: #721c24;
+    background-color: #f8d7da;
+}
+.quiz_box footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.score_box.active{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all .6s;
+}
+
+.score_box{
+    width: 550px;
+    opacity: 0;
+    pointer-events: none;
+}
