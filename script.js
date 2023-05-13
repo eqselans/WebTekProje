@@ -139,8 +139,8 @@ function optionSelected(option) {
     }
 
 
-    for(let i=0 ;i < option_list.children.length; i++){
-        option_list.children[i].classList.add("disabled")
+    for(const element of option_list.children){
+        element.classList.add("disabled")
     }
 
     document.querySelector(".next_btn").disabled = false;
