@@ -5,7 +5,8 @@
           https://github.com/eqselans/WebTekProje
                               
 "Eğer güvenlik sebebi ile açılmazsa VPN ile açmayı deneyebilirsiniz"
-		
+
+Sitenin görüntülerine Issues kısmından ulaşabilirsiniz.
 
 Websitemi ziyaret eden bir kişiyi selamla karşılayan bir anasayfa. Sol üstte logo bulunmakta.
 Hobilerimi , yeteneklerimi ve projelerimi kısa ve net bir şekilde kart kullanarak açıkladım.
