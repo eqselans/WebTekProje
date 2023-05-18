@@ -8,7 +8,6 @@
 
     <script src="iletisim.js"></script>
 
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -104,12 +103,11 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-body rounded-3">
-                <div class="alert alert-primary text-dark">
-                  Lütfen boşlukları doldurun.
-                </div>
-
-                <form class="row g-3 text-white" action="https://formspree.io/f/mlekaaqy"
-                method="POST">
+                <form
+                  class="row g-3 text-white"
+                  action="https://formspree.io/f/mlekaaqy"
+                  method="POST"
+                >
                   <div class="col-md-6">
                     <label for="mail" class="form-label">Email</label>
                     <input
@@ -117,7 +115,7 @@
                       name="mail"
                       id="mail"
                       class="form-control"
-                      placeholder="adsoyad@gmail.com" 
+                      placeholder="adsoyad@gmail.com"
                     />
                   </div>
                   <div class="col-md-6">
@@ -128,8 +126,46 @@
                       id="name"
                       class="form-control"
                       placeholder="İsim"
-                      
                     />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="" class="form-label">Cinsiyet :</label>
+                    <input type="radio" value="erkek" name="cinsiyet" />Erkek
+                    <input type="radio" value="Kadın" name="cinsiyet" />Kadın
+                  </div>
+                  <div class="col-md-6">
+                    <label for="edu">Eğitim durumunuz</label>
+                    <select id="edu" name="edu" class="option_list">
+                      <option value="sec" selected disabled>Seçiniz</option>
+                      <option value="ilkokul">İlkokul</option>
+                      <option value="ortaokul">Ortaokul</option>
+                      <option value="lise">Lise</option>
+                      <option value="lisans">Lisans</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                  <h6>Bildiğiniz programlama dilleri</h6>
+                    <input
+                      type="checkbox"
+                      id="lang1"
+                      name="lang1"
+                      value="C++"
+                    />
+                    <label for="lang1">C++</label><br />
+                    <input
+                      type="checkbox"
+                      id="lang2"
+                      name="lang2"
+                      value="C#"
+                    />
+                    <label for="lang2">C#</label><br />
+                    <input
+                      type="checkbox"
+                      id="lang3"
+                      name="lang3"
+                      value="Python"
+                    />
+                    <label for="lang3">Pyhton</label>
                   </div>
                   <div class="col-md-12">
                     <label for="phone" class="form-label">Telefon</label>
@@ -157,8 +193,12 @@
                       name="message"
                       id="message"
                       class="form-control"
-                      placeholder="Mesajınız...." 
+                      placeholder="Mesajınız...."
                     ></textarea>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="cv" class="form-label me-2">CV:</label>
+                    <input type="file" name="cv" id="cv">
                   </div>
                   <div class="col-md-6">
                     <button
@@ -205,6 +245,5 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-
   </body>
 </html>
